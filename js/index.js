@@ -55,6 +55,9 @@ addNav[3].innerHTML = 'Features';
 addNav[4].innerHTML = 'About';
 addNav[5].innerHTML = 'Contact';
 
+const ctaText = document.querySelectorAll('h1')
+ctaText[0].textContent = siteContent['cta']['h1']
+
 
 const letAllH4 = document.querySelectorAll('h4')
 letAllH4[0].textContent = siteContent['main-content']['features-h4']
