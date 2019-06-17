@@ -66,6 +66,8 @@ modAllPs[3].textContent = siteContent['main-content']['product-content']
 modAllPs[4].textContent = siteContent['main-content']['vision-content']
 modAllPs[5].textContent = siteContent['contact']['address']
 modAllPs[6].textContent = siteContent['contact']['phone']
+modAllPs[7].textContent = siteContent['contact']['email']
+modAllPs[8].textContent = siteContent['footer']['copyright']
 
 const setFooter = document.querySelectorAll()
 
