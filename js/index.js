@@ -48,15 +48,22 @@ const addMiddleImg = document.getElementById('middle-img')
 addMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
 
 const addNav = document.querySelectorAll('a')
+
 addNav[0].innerHTML = 'Services';
 addNav[1].innerHTML = 'Product';
 addNav[2].innerHTML = 'Vision';
 addNav[3].innerHTML = 'Features';
 addNav[4].innerHTML = 'About';
 addNav[5].innerHTML = 'Contact';
+addNav.forEach(function (navcolor) {
+  navcolor.style.color= 'green';
+})
 
-const ctaText = document.querySelectorAll('h1')
-ctaText[0].textContent = siteContent['cta']['h1']
+
+const ctaText = document.querySelector('h1')
+//ctaText[0].textContent = siteContent['cta']['h1']
+ctaText.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`)
+
 
 const addBtn = document.querySelectorAll('button')
 addBtn[0].textContent = siteContent['cta']['button']
