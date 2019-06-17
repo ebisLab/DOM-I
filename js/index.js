@@ -41,6 +41,9 @@ const siteContent = {
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
+const addImgCTA = document.getElementById('cta-img');
+addImgCTA.setAttribute('src', siteContent["cta"]["img-src"])
+
 const addNav = document.querySelectorAll('a')
 addNav[0].innerHTML = 'Services';
 addNav[1].innerHTML = 'Product';
@@ -69,6 +72,6 @@ modAllPs[6].textContent = siteContent['contact']['phone']
 modAllPs[7].textContent = siteContent['contact']['email']
 modAllPs[8].textContent = siteContent['footer']['copyright']
 
-const setFooter = document.querySelectorAll()
+
 
 
