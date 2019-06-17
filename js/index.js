@@ -40,3 +40,33 @@ const siteContent = {
 // Example: Update the img src for the logo
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const addNav = document.querySelectorAll('a')
+addNav[0].innerHTML = 'Services';
+addNav[1].innerHTML = 'Product';
+addNav[2].innerHTML = 'Vision';
+addNav[3].innerHTML = 'Features';
+addNav[4].innerHTML = 'About';
+addNav[5].innerHTML = 'Contact';
+
+
+const letAllH4 = document.querySelectorAll('h4')
+letAllH4[0].textContent = siteContent['main-content']['features-h4']
+letAllH4[1].textContent = siteContent['main-content']['about-h4']
+letAllH4[2].textContent = siteContent['main-content']['services-h4']
+letAllH4[3].textContent = siteContent['main-content']['product-h4']
+letAllH4[4].textContent = siteContent['main-content']['vision-h4']
+letAllH4[5].textContent = siteContent['contact']['contact-h4']
+
+const modAllPs = document.querySelectorAll('p')
+modAllPs[0].textContent = siteContent['main-content']['features-content']
+modAllPs[1].textContent = siteContent['main-content']['about-content']
+modAllPs[2].textContent = siteContent['main-content']['services-content']
+modAllPs[3].textContent = siteContent['main-content']['product-content']
+modAllPs[4].textContent = siteContent['main-content']['vision-content']
+modAllPs[5].textContent = siteContent['contact']['address']
+modAllPs[6].textContent = siteContent['contact']['phone']
+
+const setFooter = document.querySelectorAll()
+
+
