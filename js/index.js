@@ -44,6 +44,9 @@ logo.setAttribute('src', siteContent["nav"]["img-src"])
 const addImgCTA = document.getElementById('cta-img');
 addImgCTA.setAttribute('src', siteContent["cta"]["img-src"])
 
+const addMiddleImg = document.getElementById('middle-img')
+addMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
 const addNav = document.querySelectorAll('a')
 addNav[0].innerHTML = 'Services';
 addNav[1].innerHTML = 'Product';
