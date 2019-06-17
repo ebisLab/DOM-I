@@ -58,6 +58,9 @@ addNav[5].innerHTML = 'Contact';
 const ctaText = document.querySelectorAll('h1')
 ctaText[0].textContent = siteContent['cta']['h1']
 
+const addBtn = document.querySelectorAll('button')
+addBtn[0].textContent = siteContent['cta']['button']
+
 
 const letAllH4 = document.querySelectorAll('h4')
 letAllH4[0].textContent = siteContent['main-content']['features-h4']
@@ -74,9 +77,14 @@ modAllPs[2].textContent = siteContent['main-content']['services-content']
 modAllPs[3].textContent = siteContent['main-content']['product-content']
 modAllPs[4].textContent = siteContent['main-content']['vision-content']
 modAllPs[5].textContent = siteContent['contact']['address']
+
 modAllPs[6].textContent = siteContent['contact']['phone']
 modAllPs[7].textContent = siteContent['contact']['email']
 modAllPs[8].textContent = siteContent['footer']['copyright']
+
+
+
+modAllPs[5].innerHTML = siteContent['contact']['address'].split('Street ').join(`Street <br>`)
 
 
 
