@@ -38,5 +38,73 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+const addImgCTA = document.getElementById('cta-img');
+addImgCTA.setAttribute('src', siteContent["cta"]["img-src"])
+
+const addMiddleImg = document.getElementById('middle-img')
+addMiddleImg.setAttribute('src', siteContent["main-content"]["middle-img-src"])
+
+const addNav = document.querySelectorAll('a')
+
+addNav[0].innerHTML = 'Services';
+addNav[1].innerHTML = 'Product';
+addNav[2].innerHTML = 'Vision';
+addNav[3].innerHTML = 'Features';
+addNav[4].innerHTML = 'About';
+addNav[5].innerHTML = 'Contact';
+addNav.forEach(function (navcolor) {
+  navcolor.style.color= 'green';
+})
+
+
+const ctaText = document.querySelector('h1')
+//ctaText[0].textContent = siteContent['cta']['h1']
+ctaText.innerHTML = siteContent['cta']['h1'].split(' ').join(`<br>`)
+
+
+const addBtn = document.querySelectorAll('button')
+addBtn[0].textContent = siteContent['cta']['button']
+
+
+const letAllH4 = document.querySelectorAll('h4')
+letAllH4[0].textContent = siteContent['main-content']['features-h4']
+letAllH4[1].textContent = siteContent['main-content']['about-h4']
+letAllH4[2].textContent = siteContent['main-content']['services-h4']
+letAllH4[3].textContent = siteContent['main-content']['product-h4']
+letAllH4[4].textContent = siteContent['main-content']['vision-h4']
+letAllH4[5].textContent = siteContent['contact']['contact-h4']
+
+
+
+const modAllPs = document.querySelectorAll('p')
+modAllPs[0].textContent = siteContent['main-content']['features-content']
+modAllPs[1].textContent = siteContent['main-content']['about-content']
+modAllPs[2].textContent = siteContent['main-content']['services-content']
+modAllPs[3].textContent = siteContent['main-content']['product-content']
+modAllPs[4].textContent = siteContent['main-content']['vision-content']
+modAllPs[5].textContent = siteContent['contact']['address']
+
+modAllPs[6].textContent = siteContent['contact']['phone']
+modAllPs[7].textContent = siteContent['contact']['email']
+modAllPs[8].textContent = siteContent['footer']['copyright']
+modAllPs[5].innerHTML = siteContent['contact']['address'].split('Street ').join(`Street <br>`)
+
+
+//Append and Prepend new links to nav section
+
+let newAddedLinks = document.getElementsByTagName('nav')[0]
+
+let letsCreateNewLinks = function(name){
+  let newLinks = document.createElement('a');
+  newLinks.innerHTML = name;
+  return newLinks;
+}
+
+newAddedLinks.append(letsCreateNewLinks('🎁'))
+newAddedLinks.prepend(letsCreateNewLinks('🏠'))
