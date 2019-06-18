@@ -38,6 +38,9 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
+
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
 
@@ -77,6 +80,8 @@ letAllH4[3].textContent = siteContent['main-content']['product-h4']
 letAllH4[4].textContent = siteContent['main-content']['vision-h4']
 letAllH4[5].textContent = siteContent['contact']['contact-h4']
 
+
+
 const modAllPs = document.querySelectorAll('p')
 modAllPs[0].textContent = siteContent['main-content']['features-content']
 modAllPs[1].textContent = siteContent['main-content']['about-content']
@@ -88,11 +93,18 @@ modAllPs[5].textContent = siteContent['contact']['address']
 modAllPs[6].textContent = siteContent['contact']['phone']
 modAllPs[7].textContent = siteContent['contact']['email']
 modAllPs[8].textContent = siteContent['footer']['copyright']
-
-
-
 modAllPs[5].innerHTML = siteContent['contact']['address'].split('Street ').join(`Street <br>`)
 
 
+//Append and Prepend new links to nav section
 
+let newAddedLinks = document.getElementsByTagName('nav')[0]
 
+let letsCreateNewLinks = function(name){
+  let newLinks = document.createElement('a');
+  newLinks.innerHTML = name;
+  return newLinks;
+}
+
+newAddedLinks.append(letsCreateNewLinks('🎁'))
+newAddedLinks.prepend(letsCreateNewLinks('🏠'))
